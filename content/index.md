@@ -1,11 +1,14 @@
 ---
-Title: Home
-Description: This is our index page.
+Title: Min portfolio
+Description: Här hittar du min personliga presentation och mina projekt.
 ---
 
 Home page
 ==========================
 
-The source for this page is in `content/index.md`.
+Hej! Jag är Nina Li.
 
-This is a sample home page written in markdown with some frontmatter defined.
+Välkommen till min portfolio. Jag är en student vid BTH och brinner för webbutveckling och design.
+
+
+![En bild som representerar mig](%assets_url%/img/WechatIMG1.jpg)

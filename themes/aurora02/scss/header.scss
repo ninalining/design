@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $padding;
+  align-items: center;
+  background-color: $background-secondary-color;
+}
+  
+.site-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.logo img {
+  max-width: 100%;
+  height: auto;
+  width: 150px;
+}
+  
+.nav a {
+  color: $font-color;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 1rem;
+}

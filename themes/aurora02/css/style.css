@@ -6426,6 +6426,21 @@ body {
   font-family: "Sour Gummy", sans-serif;
 }
 
+p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
 html,
 body {
   height: 100%;
@@ -6501,6 +6516,94 @@ body {
   font-size: 3rem;
 }
 
+/* technology.scss */
+.landingpage {
+  display: grid;
+  gap: 1.2em 1.2em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.landingpage h1 {
+  grid-column: span 3;
+  justify-self: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.box {
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.box.span1 {
+  grid-column: span 1;
+}
+
+.box.span2 {
+  grid-column: span 2;
+}
+
+.box.span3 {
+  grid-column: span 3;
+}
+
+.technology {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+}
+
+.technology aside {
+  flex: 1 1 30%;
+  max-width: 30%;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.technology article {
+  flex: 3 1 60%;
+  max-width: 70%;
+  padding: 1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .landingpage {
+    grid-template-columns: 1fr;
+  }
+  .landingpage h1 {
+    grid-column: span 1;
+  }
+  .box {
+    grid-column: span 1 !important;
+  }
+  .technology {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .technology aside {
+    display: none;
+  }
+  .technology article {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
 blockquote {
   font-style: italic;
   margin-left: 1em;

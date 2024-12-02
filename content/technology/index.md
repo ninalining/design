@@ -2,42 +2,29 @@
 Title: Teknologier
 Description: This is my technologies page.
 Template: technologies
+techs:
+  - name: "CSS"
+    url: "css"
+    class: "span1"
+  - name: "HTML"
+    url: "html"
+    class: "span2"
+  - name: "JAVASCRIPT"
+    url: "javascript"
+    class: "span2"
+  - name: "PHP"
+    url: "php"
+    class: "span1"
+  - name: "PYTHON"
+    url: "python"
+    class: "span3"
+  - name: "GIT"
+    url: "git"
+    class: "span1"
+  - name: "SQLite"
+    url: "sqlite"
+    class: "span2"
 ---
 
 Teknologier
 ==========================
-
-<div class="box span1">
-<p>CSS</p>
-<a href="/dbwebb/design/me/portfolio/technology/css">Läs mer</a>
-</div>
-
-<div class="box span2">
-<p>HTML</p>
-<a href="/dbwebb/design/me/portfolio/technology/html">Läs mer</a>
-</div>
-
-<div class="box span2">
-<p>JAVASCRIPT</p>
-<a href="/dbwebb/design/me/portfolio/technology/javascript">Läs mer</a>
-</div>
-
-<div class="box span1">
-<p>PHP</p>
-<a href="/dbwebb/design/me/portfolio/technology/php">Läs mer</a>
-</div>
-
-<div class="box span3">
-<p>PYTHON</p>
-<a href="/dbwebb/design/me/portfolio/technology/python">Läs mer</a>
-</div>
-
-<div class="box span1">
-<p>GIT</p>
-<a href="/dbwebb/design/me/portfolio/technology/git">Läs mer</a>
-</div>
-
-<div class="box span2">
-<p>SQLite</p>
-<a href="/dbwebb/design/me/portfolio/technology/sqlite">Läs mer</a>
-</div>

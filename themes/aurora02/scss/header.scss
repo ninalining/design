@@ -1,28 +1,68 @@
+@use 'variables' as *;
+
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  background-color: $background-secondary;
   padding: $padding;
-  align-items: center;
-  background-color: $background-secondary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
 }
-  
+
 .site-header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
 }
-  
-.logo img {
-  max-width: 100%;
-  height: auto;
+
+.header .logo {
+  gap: 3rem;
+}
+
+.header .logo img {
+  max-width: 80%;
   width: 150px;
 }
-  
-.nav a {
-  color: $font-color;
+
+.header .title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: $font-color-secondary;
+}
+
+.header .nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header .nav a {
   text-decoration: none;
-  font-size: 2rem;
-  margin-right: 1rem;
+  color: $font-color-secondary;
+  font-weight: 700;
+}
+
+.header .nav a:hover {
+  color: $accent-color;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .header .nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .header .logo img {
+    height: 30px;
+  }
 }

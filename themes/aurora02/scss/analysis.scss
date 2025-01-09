@@ -1,0 +1,125 @@
+@use 'variables' as *;
+
+.analysis-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $margin;
+  padding: $padding;
+}
+
+.analysis-page h1 {
+  margin-bottom: 1.5rem;
+  color: $font-color-primary;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.analysis-page .reports {
+  display: flex;
+  justify-content: space-between;
+  gap: $margin;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.analysis-page .report-box {
+  flex: 1;
+  padding: $padding;
+  border-radius: 20px;
+  background-color: $background-secondary;
+  color: $font-color-primary;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.analysis-page .report-box:hover {
+  transform: translateY(-10px);
+  box-shadow: $box-shadow-hover;
+  cursor: pointer;
+}
+
+.analysis-page .report-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  color: $font-color-primary;
+}
+
+.analysis-page .report-box a:hover {
+  text-decoration: underline;
+}
+
+.analysis {
+  display: flex;
+  flex-direction: row;
+  gap: $margin;
+  width: 100%;
+  overflow: hidden;
+}
+
+.analysis .menu {
+  background-color: $background-alternative;
+  padding: $padding;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  //width: 30%;
+  height: fit-content;
+}
+
+.analysis .menu h2 {
+  font-size: 1.5rem;
+  color: $font-color-primary;
+  margin-bottom: $margin;
+}
+
+.analysis .menu p a {
+  text-decoration: none;
+  color: $accent-color;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.analysis .menu p a:hover {
+  text-decoration: underline;
+}
+
+.analysis .article {
+  flex: 1;
+  padding: $padding;
+  background-color: $background-secondary;
+  border-radius: 10px;
+  color: $font-color-primary;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word;
+  box-sizing: border-box; 
+}
+
+@media screen and (max-width: 768px) {
+  .analysis {
+    flex-direction: column;
+  }
+
+  .analysis .menu {
+    width: 100%;
+  }
+
+  .analysis .article {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .analysis-page .reports {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .analysis-page .report-box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+
+@use 'sass:color';
+
+//colors for the theme
+$background-primary: linear-gradient(135deg, #e7bdf2, #daa0f2);
+$background-secondary: #d8e0f2;
+$background-alternative: #88dff2;
+
+//font colors for the theme
+$font-color-primary: #4a4a4a;
+$font-color-secondary: #6d6875;
+$accent-color: #056cf2;
+$hover-color: color.adjust($accent-color, $lightness: 15%);
+
+$icon-color: #056cf2;
+$code-background: #daa0f2;
+$code-font-color: #4a4a4a;
+
+//spacing for the theme
+$padding: 2rem;
+$margin: 1rem;
+
+$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 15px 25px rgba(0, 0, 0, 0.2);

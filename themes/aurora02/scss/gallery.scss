@@ -1,0 +1,82 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $margin;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.gallery a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.gallery a:hover {
+  transform: scale(1.05);
+}
+
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.gallery p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: $font-color-primary;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: $margin / 2;
+  }
+
+  .gallery-page {
+    padding: $margin;
+  }
+}

@@ -1,7 +1,9 @@
 /* technology.scss */
+@use 'variables' as *;
+
 .landingpage {
   display: grid;
-  gap: 1.2em;
+  gap: $margin;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -9,18 +11,22 @@
   grid-column: span 3;
   justify-self: center;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: $font-color-primary;
 }
 
 .box {
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: $padding;
+  //border: 1px solid $background-alternative;
+  border-radius: 20px;
+  background-color: $background-secondary;
+  color: $font-color-primary;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: $box-shadow-hover;
+  cursor: pointer;
 }
 
 .box.span1 {
@@ -40,27 +46,29 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
+  gap: $margin;
   box-sizing: border-box;
   width: 100%;
-  padding: 1rem;
+  padding: $padding;
 }
 
 .technology aside {
   flex: 1 1 30%;
   max-width: 30%;
-  padding: 1rem;
-  background-color: #f4f4f4;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #ccc;
+  padding: $padding;
+  background-color: $background-alternative;
+  color: $font-color-secondary;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-right: 1px solid $background-primary;
   box-sizing: border-box;
 }
 
 .technology article {
   flex: 3 1 60%;
   max-width: 70%;
-  padding: 1rem;
-  background-color: #fff;
+  padding: $padding;
+  background-color: $background-secondary;
+  color: $font-color-primary;
   box-sizing: border-box;
 }
 

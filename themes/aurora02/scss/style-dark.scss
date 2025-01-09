@@ -1,0 +1,337 @@
+@use 'variables' as *;
+
+@use 'container';
+@use 'header';
+@use 'footer';
+@use 'technology';
+@use 'blockquotes';
+@use 'code';
+@use 'gallery';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+@import '../../node_modules/normalize.css/normalize';
+
+
+$background-primary-dark: #181a1b;
+$background-secondary-dark: #202225;
+$background-alternative-dark: #2c2f33;
+$font-color-primary-dark: #dcddde;
+$font-color-secondary-dark: #b9bbbe;
+$accent-color-dark: #7289da;
+
+body {
+  background-color: $background-primary-dark;
+  color: $font-color-primary-dark;
+}
+
+a {
+  color: $accent-color-dark;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header {
+  background-color: $background-secondary-dark;
+  color: $font-color-primary-dark;
+}
+
+.header .logo img {
+  filter: brightness(0.8);
+}
+
+.header .nav a {
+  color: $font-color-primary-dark;
+
+  &:hover {
+    color: $accent-color-dark;
+  }
+}
+
+.footer {
+  background-color: $background-alternative-dark;
+  color: $font-color-secondary-dark;
+}
+
+.footer a {
+  color: $accent-color-dark;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.landingpage h1 {
+  color: $font-color-primary-dark;
+}
+
+.box {
+  background-color: $background-secondary-dark;
+  color: $font-color-primary-dark;
+  border: 1px solid $background-alternative-dark;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.technology aside {
+  background-color: $background-alternative-dark;
+  color: $font-color-secondary-dark;
+  border-right: 1px solid $background-secondary-dark;
+}
+
+.technology article {
+  background-color: $background-secondary-dark;
+  color: $font-color-primary-dark;
+}
+
+code {
+  background-color: $background-primary-dark;
+  color: $font-color-secondary-dark;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+}
+
+pre {
+  background-color: $background-primary-dark;
+  color: $font-color-secondary-dark;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.analysis-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.analysis-page h1 {
+  color: $font-color-primary-dark;
+  text-align: center;
+}
+
+.analysis-page .reports {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.analysis-page .report-box {
+  flex: 1;
+  background-color: $background-secondary-dark;
+  color: $font-color-primary-dark;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+}
+
+.analysis-page .report-box h2 {
+  color: $font-color-primary-dark;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.report-box a {
+  color: $accent-color-dark;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.analysis {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.analysis .menu {
+  background-color: $background-alternative-dark;
+  color: $font-color-secondary-dark;
+  padding: 1rem;
+  border-radius: 10px;
+  //width: 30%;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  height: fit-content;
+}
+
+.analysis .menu h2 {
+  font-size: 1.5rem;
+  color: $font-color-primary-dark;
+  margin-bottom: 1rem;
+}
+
+.analysis .menu p a {
+  color: $accent-color-dark;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.analysis .article {
+  flex: 1;
+  background-color: $background-secondary-dark;
+  color: $font-color-primary-dark;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $font-color-primary-dark;
+  }
+
+  p,
+  li,
+  span,
+  a {
+    color: $font-color-secondary-dark;
+    margin-right: 1rem;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    display: block;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    filter: brightness(0.8) contrast(0.9) saturate(0.7);
+  }
+
+  pre,
+  code {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .analysis {
+    flex-direction: column;
+  }
+
+  .analysis .menu {
+    width: 100%;
+  }
+
+  .analysis .article {
+    width: 100%;
+  }
+
+  .analysis-page .reports {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.gallery a:hover {
+  transform: scale(1.05);
+}
+
+.gallery p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: $font-color-secondary-dark;
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}

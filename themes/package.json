@@ -5,11 +5,18 @@
   "directories": {
     "example": "example"
   },
-  "scripts": {
-    "lint": "stylelint \"**/*.scss\"",
-    "style": "sass aurora02/scss/style.scss aurora02/css/style.css --no-source-map",
-    "style-min": "sass aurora02/scss/style.scss aurora02/css/style.min.css --no-source-map --style compressed"
-  },
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "lint": "stylelint \"**/*.scss\"",
+  "watch": "sass aurora02/scss/style.scss:aurora02/css/style.css aurora02/scss/style-dark.scss:aurora02/css/style-dark.css --no-source-map --watch",
+  "watch-min": "sass aurora02/scss/style.scss:aurora02/css/style.min.css aurora02/scss/style-dark.scss:aurora02/css/style-dark.min.css --no-source-map --watch --style compressed",
+  "style": "npm run style-light && npm run style-dark",
+  "style-min": "npm run style-light-min && npm run style-dark-min",
+  "style-dark": "sass aurora02/scss/style-dark.scss aurora02/css/style-dark.css --no-source-map",
+  "style-dark-min": "sass aurora02/scss/style-dark.scss aurora02/css/style-dark.min.css --no-source-map --style compressed",
+  "style-light": "sass aurora02/scss/style.scss aurora02/css/style.css --no-source-map",
+  "style-light-min": "sass aurora02/scss/style.scss aurora02/css/style.min.css --no-source-map --style compressed"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

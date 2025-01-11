@@ -1,14 +1,11 @@
 ---
 Title: Min portfolio
 Description: Här hittar du min personliga presentation och mina projekt.
+Template: portfolio
+image:
+  src: "IMG_4410_medium.jpg"
+  alt: "En bild som representerar mig"
+  title: "Min profilbild"
 ---
-
 Home page
 ==========================
-
-Hej! Jag är Nina Li.
-
-Välkommen till min portfolio. Jag är en student vid BTH och brinner för webbutveckling och design.
-
-
-![En bild som representerar mig](%assets_url%/img/WechatIMG1.jpg)

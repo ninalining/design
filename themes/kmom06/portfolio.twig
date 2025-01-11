@@ -1,0 +1,36 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="main" role="main">
+        <div class="portfolio">
+            <div class="intro">
+                <div class="intro-image">
+                    <picture>
+                        <source 
+                            media="(min-width: 1024px)" 
+                            srcset="{{ base_url }}/image/{{meta.image.src}}?w=900">
+                        <source 
+                            media="(max-width: 768px)" 
+                            srcset="{{ base_url }}/image/{{meta.image.src}}?w=600">
+                        <img 
+                            src="{{ base_url }}/image/{{meta.image.src}}?w=300" 
+                            alt="{{ meta.image.alt }}" 
+                            title="{{ meta.image.title }}">
+                    </picture>
+                </div>
+                <div class="intro-text">
+                    <h1>Nina Li.</h1>
+                    <p>Hej! Jag är Nina Li.</p>
+                    <p>Välkommen till min portfolio. Jag är en student vid BTH och brinner för webbutveckling och design.</p>
+                    <p>På fritiden gillar jag att utforska nya teknologier, resa och fotografera.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

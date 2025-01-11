@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-primary;
+  color: $font-color-primary;
+}
+
+.main {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: $padding;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: $background-alternative;
+  padding: $padding;
+  text-align: center;
+  align-items: center;
+  color: $font-color-secondary;
+  font-size: 0.9rem;
+}

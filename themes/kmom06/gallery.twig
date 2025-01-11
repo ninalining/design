@@ -1,0 +1,41 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="main" role="main">
+        <div class="gallery-page">
+            <h1>{{ meta.title }}</h1>
+            <div class="gallery">
+                {% for image in meta.images %}
+                <a href="{{ base_url }}/image/{{ image.src }}" target="_blank">
+                    <picture>
+                        <source 
+                            media="(min-width: 1024px)" 
+                            srcset="{{ base_url }}/image/{{ image.src }}?w=900">
+                        <source 
+                            media="(min-width: 768px)" 
+                            srcset="{{ base_url }}/image/{{ image.src }}?w=600">
+                        <img 
+                            src="{{ base_url }}/image/{{ image.src }}?w=300" 
+                            alt="{{ image.alt }}">
+                    </picture>
+                </a>
+                {% endfor %}
+            </div>
+            <p>Bilder på söta hundar(Pixabay)</p>
+        </div>
+        <h1>{{ meta.youtube.title }}</h1>
+        <div class="embed-container">
+            <iframe 
+                src="{{ meta.youtube.url }}" 
+                title="{{ meta.youtube.title }}" 
+                frameborder="0">
+            </iframe>
+        </div>
+    </div>
+    
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

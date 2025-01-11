@@ -290,12 +290,13 @@ h1 {
 }
 
 .gallery a {
-  text-decoration: none;
+  text-decoration: underline;
   transition: transform 0.3s ease;
 }
 
 .gallery a:hover {
   transform: scale(1.05);
+  color: #049;
 }
 
 .gallery img {

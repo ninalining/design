@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: $padding;
+  padding: $spacing-large;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -23,7 +23,8 @@ h1 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: $margin;
+  gap: $spacing-medium;
+  padding: $spacing-medium;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -32,22 +33,22 @@ h1 {
 }
 
 .gallery a {
-  text-decoration: underline;
+  text-decoration: none;
   transition: transform 0.3s ease;
 }
 
 .gallery a:hover {
   transform: scale(1.05);
-  color: #049;
 }
 
 .gallery img {
   max-width: 100%;
+  height: auto;
   border-radius: 8px;
 }
 
 .gallery p {
-  margin-top: 0.5rem;
+  margin-top: $spacing-small;
   font-size: 1rem;
   color: $font-color-primary;
 }
@@ -74,7 +75,7 @@ h1 {
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: 1fr;
-    gap: $margin / 2;
+    gap: $spacing-small;
   }
 
   .gallery-page {

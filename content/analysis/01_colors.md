@@ -39,7 +39,7 @@ Resultat
 
 1. Coca-Cola
 
-	![Coca-Cola](%base_url%/assets/image/coca-cola.png)
+	![Coca-Cola](%assets_url%/img/coca-cola.png)
 
 	Färgpalett:
 	<table style="border-spacing: 4px; border-collapse: separate">

@@ -1,6 +1,7 @@
 ---
 Title: About
 Description: Här hittar du vilka tekniker användas i sidan.
+Template: about
 ---
 
 About

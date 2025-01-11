@@ -60,7 +60,7 @@ Resultat
 
 2. Instagram
 
-	![Instagram, hemsida](../../assets/img/IMG_4404.JPG)
+	![Instagram, hemsida](%assets_url%/img/IMG_4404.JPG)
 
 	Färgpalett-daytime:
 	<table style="border-spacing: 4px; border-collapse: separate">
@@ -73,7 +73,7 @@ Resultat
 	</tr>
 	</table>
 
-	![Instagram, hemsida_natt](../../assets/img/instagram_natt.png)
+	![Instagram, hemsida_natt](%assets_url%/img/instagram_natt.png)
 
 	Färgpalett-night:
 	<table style="border-spacing: 4px; border-collapse: separate">
@@ -94,7 +94,7 @@ Resultat
 
 3. Airbnb
 
-	![Airbnb hemsida](portfolio/assets/img/airbnb.png)
+	![Airbnb hemsida](%assets_url%/img/airbnb.png)
 
 	Färgpalett:
 	<table style="border-spacing: 4px; border-collapse: separate">
